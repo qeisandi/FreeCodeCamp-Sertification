@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+thead th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+span {
+    display: inline-block;
+}
+
+tr[class="read"] {
+    background-image: linear-gradient(to right, #e8f5e9, #c8e6c9);
+}
+
+tr[class="to-read"] {
+    background-image: linear-gradient(to right, #ffebee, #ffcdd2); 
+}
+
+tr[class="in-progress"] {
+    background-image: linear-gradient(to right, #fffde7, #fff9c4);
+}
+
+span[class="status"], 
+span[class^="rate"] {
+    height: 30px;
+    width: 110px;
+    padding: 5px 8px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tr[class="to-read"] span[class="status"] {
+    border: 1px solid #d32f2f;
+    background-image: linear-gradient(to bottom, #ef9a9a, #ef5350);
+    color: white;
+}
+
+tr[class="read"] span[class="status"] {
+    border: 1px solid #388e3c;
+    background-image: linear-gradient(to bottom, #a5d6a7, #66bb6a);
+    color: white;
+}
+
+tr[class="in-progress"] span[class="status"] {
+    border: 1px solid #fbc02d;
+    background-image: linear-gradient(to bottom, #ffeb3b, #ffca28);
+    color: #333;
+}
+
+
+span[class^="rate"] > span {
+    border: 1px solid #999;
+    border-radius: 50%;
+    margin: 0 2px;
+    height: 18px;
+    width: 18px;
+    background-color: #e0e0e0;
+}
+
+span[class~="one"] span:first-child {
+  background-color: yellow;
+  background-image: linear-gradient(darkblue,teal)
+}
+
+span[class~="two"] span:first-child,
+span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(#90caf9, #1976d2);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(#a5d6a7, #2e7d32);
+}
